@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #577590;   
+}
+#calc-container{
+    width: 400px;
+    background: #4d908e;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+}
+.calc-display{
+    background: #1b3a4b;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+}
+.calc-display h1{
+    margin:0;
+    padding: 25px;
+    font-size:45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+ 
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* cacl buttons */
+
+  .calc-buttons{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap:10px;
+      padding: 10px;
+      
+      
+  }
+  
+  button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover{
+      filter: brightness(110%);
+  }
+
+  button:active{
+      transform: translateY(1px);
+  }
+
+  button:focus{
+      outline: none;
+  }
+
+  .operator{
+      background-color:#3d405b;
+      color: #90be6d;
+      font-size: 35px;
+
+  }
+
+  .equal-btn{
+    grid-column: -2;
+    grid-row: 2/span 4;
+  }
+
+#clear-btn{
+    background-color: #bf0603;
+    color: #fff;
+}
+
+#clear-btn:hover{
+    filter: brightness(90%);
+}
+.discription-txt{
+    font-family: 'Arvo', serif;
+    font-size: 1.5rem;
+   color: #fff;
+   margin-bottom: 50px;
+}
+
+/* media queries: Large phone */
+@media screen and (max-width: 600px){
+    #calc-container{
+        width: 90%;
+        margin: auto;
+    }
+}
